@@ -11,23 +11,21 @@
 				});
 
 				function send(){
-					var start=$("#start").val();
-					var finish=$("#finish").val();
-					var gallons=$("#gallons").val();
 					var user=$("#user").val();
-					var station=$("#station").val();
-					var truck=$("#truck").val();
+					var user2=$("#user2").val();
+					var officer=$("#officer").val();
+					var officer2=$("#officer2").val();
+					var date=$("#date").val();
 					var comments=$("#comments").val();
 
 					var url="submit_log.php";
 		
 					$.post(url,{
 						"user": user,
-						"station": station,
-						"truck": truck,
-						"start": start,
-						"finish": finish,
-						"gallons": gallons,
+						"user2": user2,
+						"officer": officer,
+						"officer2": officer2,
+						"date": date,
 						"comments": comments
 					}).done(function( data ) {
 						alert( data );
@@ -43,26 +41,23 @@
 	<body>
 		<div data-role="page" data-theme="a">
 			<div data-role="header" data-position="inline">
-				<h1>Fuel Log Form</h1>
+				<h1>Shift Exchange Form</h1>
 			</div>
 			<div data-role="content" data-theme="a">
-				<label>Start:</label>
-				<input type="number" id="start">
+				<?php include("../employee/user.php");?>
+				<label>Requests a Shift Exchange with:</label>
+				<?php include("../employee/user2.php");?>
 
-				<label>Finish:</label>
-				<input type="number" id="finish">
+				<label>On:</label>
+        			<input type="date" id="date" name="date">
+                                
+				<label>Request will be sent for approval to Lt:</label>
+				<?php include("../employee/officer.php");?>
 
-				<label>Gallons:</label>
-				<input type="number" id="gallons">
+				<label>And BC:</label>
+				<?php include("../employee/officer2.php");?>
 
-				<?php 
-					include("../employee/user.php");
-					include("../trucks/truck.php");
-					include("../stations/station.php");
-
-				?>
-
-				<label>Comments</label>
+                                <label>Comments</label>
 				<textarea id="comments"></textarea>
 
 				<div class="ui-grid-a">

@@ -4,6 +4,12 @@
                                 $("#station").val(localStorage.station);
                                 $("#station").selectmenu("refresh");
 
+                                $("#station").change(function(){
+                                    localStorage.station = $("#station").val();
+                                }); 
+
+
+
                         });
 
 </script>

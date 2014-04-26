@@ -53,11 +53,6 @@
                                         $("#bottle").val("");
                                         $("#comments").val("");
 
-                                        localStorage.user=user;
-                                        localStorage.station=station;
-                                        localStorage.truck=truck;
-
-        
                                 }
                         });
                 </script>
