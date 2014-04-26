@@ -65,7 +65,6 @@
                         <div data-role="content" data-theme="a">
                                 <label>Bottle Inventory:</label>
                                 <input type="number" id="bottle" value="<?php echo $bottle;?>">
-
                                 <?php
                                         include("../employee/user.php");
                                         include("../trucks/truck.php");
@@ -76,7 +75,7 @@
                                 <label>Comments:</label>
                                 <textarea id="comments"></textarea>
 
-                                <label>PSI Over 4,500?</label>
+                                <label>PSI Over 4,000?</label>
                                 <div class="ui-grid-a">
                                     <div class="ui-block-a"><button id="low" data-theme="b">No</button></div>
                                     <div class="ui-block-b"><button id="full" data-theme="c">Yes</button></div>
