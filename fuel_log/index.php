@@ -17,6 +17,7 @@
 					var user=$("#user").val();
 					var station=$("#station").val();
 					var truck=$("#truck").val();
+					var mileage=$("#mileage").val();
 					var comments=$("#comments").val();
 
 					var url="submit_log.php";
@@ -28,6 +29,7 @@
 						"start": start,
 						"finish": finish,
 						"gallons": gallons,
+                                                "mileage": mileage,
 						"comments": comments
 					}).done(function( data ) {
 						alert( data );
@@ -54,6 +56,9 @@
 
 				<label>Gallons:</label>
 				<input type="number" id="gallons">
+
+				<label>Mileage:</label>
+				<input type="number" id="mileage">
 
 				<?php 
 					include("../employee/user.php");
