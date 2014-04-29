@@ -7,3 +7,4 @@
                 <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
                 
                 <script src="../js/locals.js"></script>
+                <script src="../js/date.js"></script>
