@@ -6,6 +6,9 @@
 		<script>
 			$(document).ready(function(){
 
+                                //set title
+                                $("#title").html("Shift Exchange Request");
+
 				$("#send").click(function(){
 					send();
 				});
@@ -40,9 +43,8 @@
 	</head>
 	<body>
 		<div data-role="page" data-theme="a">
-			<div data-role="header" data-position="inline">
-				<h1>Shift Exchange Form</h1>
-			</div>
+                        <?php include("../php/nav_home.php");?>
+
 			<div data-role="content" data-theme="a">
 				<?php include("../employee/user.php");?>
 				<label>Requests a Shift Exchange with:</label>

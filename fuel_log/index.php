@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Fuel Log</title>
                 <?php include("../headers/header1.php");?>
 		<script>
 			$(document).ready(function(){
+                                $("#title").html("Fuel Log");
 
 				$("#send").click(function(){
 					send();
@@ -44,9 +44,7 @@
 	</head>
 	<body>
 		<div data-role="page" data-theme="a">
-			<div data-role="header" data-position="inline">
-				<h1>Fuel Log Form</h1>
-			</div>
+                            <?php include("../php/nav_home.php");?>
 			<div data-role="content" data-theme="a">
 				<label>Start:</label>
 				<input type="number" id="start">

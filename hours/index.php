@@ -28,11 +28,7 @@
 	</head>
 	<body>
 		<div data-role="page" data-theme="a">
-			<div data-role="header" data-position="inline">
-				<h1 id="title"></h1>
-                                <a href="../" data-icon="home" class="ui-btn-left">Home</a>
-<!--                                <a href="#" data-icon="gear" class="ui-btn-right">Options</a> -->
-			</div>
+                        <?php include("../php/nav_home.php");?>
 			<div data-role="content" data-theme="a">
                             <form id="form1">
 				<?php 

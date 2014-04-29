@@ -4,11 +4,12 @@
 <!DOCTYPE html>
 <html>
         <head>
-                <title>SCBA Bottle Check</title>
                 <?php include("../headers/header1.php");?>
                
                 <script>
                         $(document).ready(function(){
+                                //set title
+                                $("#title").html("SCBA Bottle Check");
 
                                 $("#user").val(localStorage.user);
                                 $("#user").selectmenu("refresh");
@@ -59,9 +60,8 @@
         </head>
         <body>
                 <div data-role="page" data-theme="a">
-                        <div data-role="header" data-position="inline">
-                                <h1>SCBA Bottle Check</h1>
-                        </div>
+                        <?php include("../php/nav_home.php");?>
+
                         <div data-role="content" data-theme="a">
                                 <label>Bottle Inventory:</label>
                                 <input type="number" id="bottle" value="<?php echo $bottle;?>">

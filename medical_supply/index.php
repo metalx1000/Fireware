@@ -3,12 +3,18 @@
 	<head>
                 <?php include("../headers/header1.php");?>
 		<script src="../js/supply_submit.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        //set title
+                        $("#title").html("Medical Supply Order Form");
+                    });
+                </script>
+
 	</head>
 	<body>
 		<div data-role="page" data-theme="a">
-			<div data-role="header" data-position="inline">
-				<h1>Medical Supply Order</h1>
-			</div>
+                        <?php include("../php/nav_home.php");?>
+
 			<div data-role="content" data-theme="a">
 				<?php 
 					include("../employee/user.php");
