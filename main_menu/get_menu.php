@@ -1,3 +1,5 @@
+
+<li><a href='../CAD/dispatch/voice/talk_1.php' data-ajax='false'>DISPATCH</a></li>
 <?php
 $myFile = "item.lst";
 $fh = fopen($myFile, 'r');
