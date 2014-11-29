@@ -9,7 +9,7 @@
         function get_dispatch(){
             console.log("Checking for Updates.");
             var _msg = msg;
-            $.get( "dispatch.php", { unit: unit },function( data ) {
+            $.get( "../msg.txt", { unit: unit },function( data ) {
                 if(_msg != data){
                     console.log("New message: " + data);
                     console.log("Old message" + _msg);

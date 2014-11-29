@@ -4,4 +4,9 @@ $address = htmlspecialchars($_GET['address']);
 $units = htmlspecialchars($_GET['units']);
 
 print "$units $call_type call at $address";
+
+$myfile = fopen("../msg.txt", "w") or die("Unable to open file!");
+fwrite($myfile, "$units $call_type call at $address");
+fclose($myfile);
+
 ?>
