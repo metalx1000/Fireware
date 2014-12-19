@@ -1,0 +1,1 @@
+[19-Dec-2014 14:07:35 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home3/metalx/public_html/enfd24/shift_exchange/print.php on line 12
