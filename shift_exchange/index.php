@@ -84,6 +84,7 @@
             <div data-role="navbar">
                 <ul>
                     <li><a href="view.php" data-ajax="false">View Entries</a></li>
+                    <li><a href="index.php?key=SAKDF23984FSA" data-ajax="false">New Entry</a></li>
                 </ul>
             </div><!-- /navbar -->
 		<div data-role="header" data-position="inline">

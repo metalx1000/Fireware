@@ -3,7 +3,8 @@
 include('connect.php');
 include('table.php');
 
-$result = mysqli_query($con,"SELECT * FROM $table");
+$user = $_GET['user'];
+$result = mysqli_query($con,"SELECT * FROM $table WHERE user2=$user OR user=$user");
 
 $rows = array();
 
