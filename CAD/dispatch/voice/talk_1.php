@@ -14,7 +14,8 @@
                 if(_msg != data){
                     console.log("New message: " + data);
                     console.log("Old message" + _msg);
-                    msg = data;
+                    msg = data.replace(".","<br>");
+                    msg = data.replace(",","<br>");
                     $( "#msg" ).html( data );
                     var dis = new SpeechSynthesisUtterance(data);
                     window.speechSynthesis.speak(dis);
