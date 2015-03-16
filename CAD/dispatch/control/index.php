@@ -22,9 +22,13 @@
                     var units = $("#units").html();
                     var address = $("#address").val();
                     var d = new Date();
-                    var hours = d.getHours().toString();;
+                    var hours = d.getHours().toString();
                     var minutes = d.getMinutes().toString();
                     var comments = $("#comments").val();
+
+                    if(minutes < 10){
+                      minutes = "0" + minutes;
+                    }
                     var time = hours + minutes;
                     console.log(time);
 
@@ -36,10 +40,31 @@
                       time: time + " hours"
                     } )
                         .done(function(data){
-                            $("#address").val('');
-                            $("#units").html('');
+                            //$("#address").val('');
+                            //$("#units").html('');
                         });
                 }); 
+
+              $("#clear_units").click(function(){
+                $("#units").html("");
+              });
+
+              $("#clear_call").click(function(){
+                $("#units").html("");
+                $("#address").val('');
+                $("#units").html('');
+                $("#comments").val('');
+                $.get( "submit.php", { 
+                      call_type: "clear", 
+                      units: "", 
+                      address: "",
+                      comments: "",
+                      time: ""
+                } )
+
+
+              });
+
             });
         </script>
 </head>
@@ -50,6 +75,8 @@
 		</div>
 		<div data-role="content" data-theme="a">
                     <div id="units"> </div>
+                    <button id="clear_units" data-inline="true">Clear Units</button>
+                    <button id="clear_call" data-inline="true">Clear Call</button>
                     <ul id="units_search" data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Units...">
                         <li><a href="#" class="unit" class="unit">Engine 20</a></li>
                         <li><a href="#" class="unit">Engine 21</a></li>
@@ -72,7 +99,7 @@
 
                     <textarea id="comments" name="comments" placeholder="Comments"></textarea>
 
-                    <label>Type of Call</label>
+                    <label>Type of Call:</label>
                     <fieldset class="ui-grid-a">
                         <div class="ui-block-a submit"><button type="submit" data-theme="c">Medical</button></div>
                         <div class="ui-block-b submit"><button type="submit" data-theme="b">Fire</button></div>     
