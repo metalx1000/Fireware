@@ -21,8 +21,20 @@
                     var call_type = e.currentTarget.innerHTML;
                     var units = $("#units").html();
                     var address = $("#address").val();
+                    var d = new Date();
+                    var hours = d.getHours().toString();;
+                    var minutes = d.getMinutes().toString();
+                    var comments = $("#comments").val();
+                    var time = hours + minutes;
+                    console.log(time);
 
-                    $.get( "submit.php", { call_type: call_type, units: units, address: address } )
+                    $.get( "submit.php", { 
+                      call_type: call_type, 
+                      units: units, 
+                      address: address,
+                      comments: comments,
+                      time: time + " hours"
+                    } )
                         .done(function(data){
                             $("#address").val('');
                             $("#units").html('');
@@ -57,6 +69,8 @@
                     </ul>
 
                     <input type="text" id="address" placeholder="Address">
+
+                    <textarea id="comments" name="comments" placeholder="Comments"></textarea>
 
                     <label>Type of Call</label>
                     <fieldset class="ui-grid-a">
