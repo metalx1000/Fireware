@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../../../js/jquery-2.1.1.min.js"></script>
     <script>
         unit = "ENG24";
