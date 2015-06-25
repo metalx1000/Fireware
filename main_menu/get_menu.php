@@ -1,6 +1,6 @@
 
-<li><a href='../CAD/dispatch/voice/talk_1.php' data-ajax='false'>DISPATCH Station</a></li>
-<li><a href='../CAD/dispatch/control' data-ajax='false'>DISPATCH Control</a></li>
+<li><a href='../CAD/dispatch_v2' data-ajax='false'>DISPATCH Station</a></li>
+<li><a href='../CAD/dispatch_v2/index.php?key=1234' data-ajax='false'>DISPATCH Control</a></li>
 <?php
 $myFile = "item.lst";
 $fh = fopen($myFile, 'r');
