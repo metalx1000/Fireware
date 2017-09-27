@@ -28,7 +28,7 @@
         $.getJSON( url, function( data ) {
           list = data;
           data.forEach(function(i){
-            stations.push(i[2]);
+            stations.push(i.station);
           });
           }).done(function(){
 
@@ -54,10 +54,10 @@
 
       function loadStaff(){
         list.forEach(function(i){
-          var s = i[2];
+          var s = i.station;
           s = s.replace(" ", "_");
-          var name = i[0];
-          var rank = i[1];
+          var name = i.name;
+          var rank = i.rank;
 
           if(rank == "Fire Fighter"){
             var t = '<a href="#" class="btn btn-success btn-block">'+name+'</a>';
